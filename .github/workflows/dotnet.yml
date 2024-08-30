@@ -15,18 +15,12 @@ jobs:
      - name: Setup .NET
        uses: actions/setup-dotnet@v1
        with:
-        dotnet-version: '6.0.x'
-   #  - name: Restore dependencies
-    #   run: dotnet restore
-    # - name: Build
-     #  run: dotnet build --no-restore
-    
-      
+        dotnet-version: '6.0.x'   
      - name: Polaris Scan
        uses: synopsys-sig/synopsys-action@v1.11.0
        env:
-          DETECT_DETECTOR_SEARCH_DEPTH: 4
-          DETECT_ACCURACY_REQUIRED: "GIT,NUGET"
+          DETECT_DETECTOR_SEARCH_DEPTH: 1
+          # DETECT_ACCURACY_REQUIRED: "GIT,NUGET"
        with:
           ### SCANNING: Required fields
           polaris_server_url: ${{ vars.POLARIS_SERVERURL }}
