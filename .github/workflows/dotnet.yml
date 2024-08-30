@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: checkout-bitbucket
-       run: git clone https://waizguy@bitbucket.org/jwpolaris/piranha.core.git
+       run: git clone https://waizguy@bitbucket.org/jwpolaris/piranha.core.git .
      - name: Setup .NET
        uses: actions/setup-dotnet@v1
        with:
@@ -33,7 +33,7 @@ jobs:
      - name: Polaris Scan
        uses: synopsys-sig/synopsys-action@v1.11.0
        env:
-          DETECT_DETECTOR_SEARCH_DEPTH: 3
+          DETECT_DETECTOR_SEARCH_DEPTH: 2
        with:
           ### SCANNING: Required fields
           polaris_server_url: ${{ vars.POLARIS_SERVERURL }}
