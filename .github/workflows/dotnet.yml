@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: checkout-bitbucket
-       run: git clone https://bitbucket.org/jwpolaris/piranha.core.git
+       run: git clone https://waizguy@bitbucket.org/jwpolaris/piranha.core.git
      - name: Setup .NET
        uses: actions/setup-dotnet@v1
        with:
