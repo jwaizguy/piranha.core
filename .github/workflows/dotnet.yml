@@ -45,4 +45,4 @@ jobs:
           ### SARIF report parameters
           polaris_reports_sarif_create: true
           polaris_upload_sarif_report: true
-    l
+    
