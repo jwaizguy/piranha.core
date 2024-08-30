@@ -25,7 +25,7 @@ jobs:
      - name: Polaris Scan
        uses: synopsys-sig/synopsys-action@v1.11.0
        env:
-          DETECT_DETECTOR_SEARCH_DEPTH: 0
+          DETECT_DETECTOR_SEARCH_DEPTH: 1
           DETECT_ACCURACY_REQUIRED: LOW
        with:
           ### SCANNING: Required fields
