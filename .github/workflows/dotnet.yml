@@ -1,4 +1,4 @@
-name: .NET core Linux3
+name: .NET core Linux4
 
 on:
   push:
