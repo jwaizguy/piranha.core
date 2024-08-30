@@ -20,7 +20,15 @@ jobs:
     #   run: dotnet restore
     # - name: Build
      #  run: dotnet build --no-restore
-     
+     - name: Setup Node.js environment
+       uses: actions/setup-node@v4.0.3
+       with:
+         node-version:  10.15.1    
+    # Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm.
+         # cache: npm
+    # Used to specify the path to a dependency file: package-lock.json, yarn.lock, etc. Supports wildcards or a list of file names for caching multiple dependencies.
+         cache-dependency-path: /home/runner/work/piranha.core/*
+     - run:  npm install  
       
      - name: Polaris Scan
        uses: synopsys-sig/synopsys-action@v1.11.0
