@@ -25,8 +25,8 @@ jobs:
      - name: Polaris Scan
        uses: synopsys-sig/synopsys-action@v1.11.0
        env:
-          DETECT_DETECTOR_SEARCH_DEPTH: 1
-          DETECT_ACCURACY_REQUIRED: LOW
+          DETECT_DETECTOR_SEARCH_DEPTH: 4
+          DETECT_ACCURACY_REQUIRED: "GIT,NUGET"
        with:
           ### SCANNING: Required fields
           polaris_server_url: ${{ vars.POLARIS_SERVERURL }}
